@@ -11,6 +11,7 @@
 
     <modules>
         <module>../springboot-swagger</module>
+        <module>../springboot-http</module>
     </modules>
 
 </project>
