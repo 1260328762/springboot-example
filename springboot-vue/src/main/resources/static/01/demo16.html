@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-16-修饰符</title>
+</head>
+<body>
+<div id="app">
+
+    <input type="text" v-model.number="n1"/>
+    +
+    <input type="text" v-model.number="n2"/>
+
+    ={{n1+n2}}
+</div>
+
+<script src="../lib/vue.min.js"></script>
+<script>
+
+    var data = {
+        website:'www.baidu.com',
+        message:"     123"
+    };
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            n1:1,
+            n2:2
+        }
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-15-下拉列表</title>
+</head>
+<body>
+<div id="app">
+    <select name="website" v-model="website">
+        <option value="">请选择</option>
+        <option value="www.baidu.com">百度</option>
+        <option value="www.淘宝.com">淘宝</option>
+    </select>
+
+    <div v-show="website">
+        选中的是：{{website}}
+    </div>
+</div>
+
+<script src="../lib/vue.min.js"></script>
+<script>
+
+    var data = {
+        website:'www.baidu.com'
+    };
+
+    var vm = new Vue({
+        el: '#app',
+        data: data
+    });
+
+
+</script>
+</body>
+</html>

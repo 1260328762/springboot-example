@@ -12,6 +12,9 @@
     <modules>
         <module>../springboot-swagger</module>
         <module>../springboot-http</module>
+        <module>../springboot-vue</module>
+        <module>../springboot-quartz</module>
+        <module>../springboot-dubbo</module>
     </modules>
 
 </project>

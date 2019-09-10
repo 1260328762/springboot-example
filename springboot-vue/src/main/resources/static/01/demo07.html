@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-07-综合小例子</title>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+    <input type="text" v-model="message"/>
+    <button v-on:click="reverseMessage">反转字符串</button>
+</div>
+
+<script src="../lib/vue.min.js"></script>
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'hello Vue',
+            ok: false
+        },
+        methods:{
+            reverseMessage:function () {
+                console.log(this)
+                this.message = this.message.split("").reverse().join('');
+            }
+        }
+
+    })
+
+
+</script>
+</body>
+</html>

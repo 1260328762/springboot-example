@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cl.springbootquartz.mapper.ScheduleJobDao" >
+
+
+   <insert id="insertSelective" parameterType="com.cl.springbootquartz.entity.ScheduleJob" useGeneratedKeys="true" keyProperty="jobId">
+       insert into schedule_job(
+       <trim suffixOverrides=",">
+           <if test="jobId != null">
+               job_id,
+           </if>
+           <if test="beanName != null and beanName != ''">
+               bean_name,
+           </if>
+           <if test="methodName != null and methodName != ''">
+               method_name,
+           </if>
+           <if test="params != null">
+               params,
+           </if>
+           <if test="cronExpression !=null and cronExpression != ''">
+               cron_expression,
+           </if>
+           <if test="status != null">
+               status
+           </if>
+       </trim>
+       )
+       values(
+       <trim suffixOverrides=",">
+           <if test="jobId != null">
+               #{jobId},
+           </if>
+           <if test="beanName != null and beanName != ''">
+               #{beanName},
+           </if>
+           <if test="methodName != null and methodName != ''">
+               #{methodName},
+           </if>
+           <if test="params != null">
+               #{params},
+           </if>
+           <if test="cronExpression !=null and cronExpression != ''">
+               #{cronExpression},
+           </if>
+           <if test="status != null">
+               #{status}
+           </if>
+       </trim>
+       )
+   </insert>
+
+</mapper>
