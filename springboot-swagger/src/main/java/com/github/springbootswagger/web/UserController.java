@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@Api(description = "用户的增删改查")
+@Api(description = "用户的增删改查" ,value = "用户行为")
 public class UserController {
 
     private static List<User> list = new ArrayList<>();
@@ -43,11 +43,11 @@ public class UserController {
 
 
     @PostMapping("/addUser")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "id",value = "用户ID",required = true,dataType = "Integer"),
-            @ApiImplicitParam(name = "username", value = "用户名称", required = true, dataType = "String"),
-            @ApiImplicitParam(name = "address", value = "用户地址", required = true, dataType = "String")
-    })
+    // @ApiImplicitParams({
+    //         @ApiImplicitParam(name = "id",value = "用户ID",required = true,dataType = "Integer"),
+    //         @ApiImplicitParam(name = "username", value = "用户名称", required = true, dataType = "String"),
+    //         @ApiImplicitParam(name = "address", value = "用户地址", required = true, dataType = "String")
+    // })
     @ApiOperation(value = "增加用户")
     public boolean addUser(User user) {
         return list.add(user);
