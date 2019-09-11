@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-11-vue实例的使用</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="message">
+    {{message | capitalize}}
+</div>
+
+<script src="../lib/vue.min.js"></script>
+<script>
+
+    var data = {
+        message: "hello vue",
+        login: true
+    };
+
+    var vm = new Vue({
+        el: '#app',
+        data: data
+    });
+
+
+    //取vue中的值
+    console.log(vm.message)
+
+    //赋值
+    vm.message = "new Message";
+    console.log(vm.message);
+
+    //vm示例的其他属性
+    console.log(vm.$el);
+    console.log(vm.$data);
+
+    var a = function(newVal,oldVal){
+        console.log("message变化了" + "newVal: "+newVal + " oldVau: " + oldVal)
+    };
+
+
+    //监听
+    vm.$watch("message", a);
+</script>
+</body>
+</html>

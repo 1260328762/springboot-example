@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-14-单选按钮</title>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <li v-for="site in sites"><a :href="site.name">{{site.name}}</a></li>
+    </ol>
+    <select name="" id="">
+        <option>请选择</option>
+        <option  v-for="site in sites">{{site.name}}</option>
+    </select>
+
+    <ol>
+        <li v-for="value in 10">{{value}}</li>
+    </ol>
+</div>
+
+<script src="../lib/vue.min.js"></script>
+<script>
+
+    var data = {
+        sites: [
+            {
+                name: 'http://qfedu.com'
+            },
+            {
+                name: 'http://www.baidu.com'
+            },
+            {
+                name: "htpp://www.taobao.com"
+            }
+        ]
+    };
+
+    var vm = new Vue({
+        el: '#app',
+        data: data
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-12-逻辑判断</title>
+</head>
+<body>
+<div id="app">
+    <div v-show="message == 'vue'">
+        {{message}}
+    </div>
+
+    <div v-if="num > 0.5">
+        {{num}} >=0.5
+    </div>
+    <div v-else-if="num > 0.2">
+        {{num}} > 0.2
+    </div>
+    <div v-else>
+        {{num}}  <= 0.2
+    </div>
+</div>
+
+<script src="../lib/vue.min.js"></script>
+<script>
+
+    var data = {
+        message: "vue2",
+        ok: true,
+        num:Math.random()
+    };
+
+    var vm = new Vue({
+        el: '#app',
+        data: data
+    });
+
+
+</script>
+</body>
+</html>

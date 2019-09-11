@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-17-按键修饰符</title>
+</head>
+<body>
+<div id="app">
+    <button v-on:click.13="say('hi')">say</button>
+
+    <input type="text" v-on:keyup="print">
+</div>
+
+<script src="../lib/vue.min.js"></script>
+<script>
+
+    var data = {
+        website:'www.baidu.com',
+        message:"     123"
+    };
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            n1:1,
+            n2:2
+        },
+        methods:{
+            say:function (message) {
+                alert(message)
+            },
+            print:function () {
+                console.log("案件事件")
+            }
+        }
+    });
+
+
+</script>
+</body>
+</html>
