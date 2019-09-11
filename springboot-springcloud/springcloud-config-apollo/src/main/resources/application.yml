@@ -1,0 +1,15 @@
+app:
+  id: 20190909
+
+env: dev
+apollo:
+  meta: http://106.12.25.204:8070
+  cacheDir: ../cache
+  boostrap:
+    enabled: true
+    eagerLoad:
+      enabled: true
+
+
+server:
+  port: 8080

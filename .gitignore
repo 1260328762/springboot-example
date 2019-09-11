@@ -91,3 +91,5 @@ springboot-http/springboot-http.iml
 springboot-http/.mvn/wrapper/maven-wrapper.properties
 springboot-http/.mvn/wrapper/maven-wrapper.jar
 .idea/
+springboot-http/sprintboot-http.iml
+springboot-parent/springboot-parent.iml

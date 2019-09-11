@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.cl</groupId>
-    <artifactId>sprintboot-http</artifactId>
+    <artifactId>springboot-http</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>springboot-http</name>

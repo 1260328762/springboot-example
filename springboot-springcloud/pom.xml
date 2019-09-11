@@ -13,6 +13,8 @@
         <module>springcloud-consumer</module>
         <module>springcloud-provider</module>
         <module>eureka</module>
+        <module>springcloud-config-client</module>
+        <module>springcloud-config-server</module>
     </modules>
 
 </project>
